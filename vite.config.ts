@@ -41,5 +41,12 @@ export default defineConfig({
       formats: ['es'],
       fileName: () => `${entry}.js`,
     },
+    rollupOptions: {
+      // Do NOT bundle React. The dashboard host injects an import-map that
+      // maps "react" + "react/jsx-runtime" to /host-modules/* shims, which
+      // re-export the host's single React instance. Two copies of React
+      // would have separate ReactCurrentDispatcher → hooks throw on render.
+      external: ['react', 'react/jsx-runtime'],
+    },
   },
 });
