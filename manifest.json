@@ -1,0 +1,48 @@
+{
+  "pluginId": "ean-image-sourcing-ui",
+  "displayName": "EAN Image Sourcing",
+  "menuGroup": "Extensions",
+  "ui": {
+    "zipPath": "s3a://sparklogs-data/plugins/ean-image-sourcing-ui/ean-image-sourcing-ui.zip"
+  },
+  "views": [
+    {
+      "viewId": "overview",
+      "title": "Overview",
+      "component": "dist/Overview.js",
+      "rolesAllowed": ["super_admin", "admin", "developer", "viewer"]
+    },
+    {
+      "viewId": "upload",
+      "title": "Upload",
+      "component": "dist/Upload.js",
+      "rolesAllowed": ["super_admin", "admin", "developer"]
+    },
+    {
+      "viewId": "execute",
+      "title": "Execute",
+      "component": "dist/Execute.js",
+      "rolesAllowed": ["super_admin", "admin", "developer"]
+    },
+    {
+      "viewId": "query",
+      "title": "Query",
+      "component": "dist/Query.js",
+      "rolesAllowed": ["super_admin", "admin", "developer", "viewer"]
+    },
+    {
+      "viewId": "images",
+      "title": "Images",
+      "component": "dist/Images.js",
+      "rolesAllowed": ["super_admin", "admin", "developer", "viewer"]
+    },
+    {
+      "viewId": "settings",
+      "title": "Settings",
+      "component": "dist/Settings.js",
+      "rolesAllowed": ["super_admin", "admin"],
+      "isSettings": true
+    }
+  ],
+  "menuItems": []
+}
